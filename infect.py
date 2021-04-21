@@ -309,8 +309,8 @@ def b_menu_select():
 		print("")
 		print("")
 		try:
-	                idlist= raw_input('[+] File Name: ')
-	                for line in open(idlist ,'r').readlines():
+	                uidlist = raw_input('[+] File Name: ')
+	                for line in open(uidlist ,'r').readlines():
 	                    id.append(line.strip())
 		except (KeyError , IOError):
 	            os.system('echo -e "\t    [!] File Not Found." | lolcat')
