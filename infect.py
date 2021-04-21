@@ -311,13 +311,13 @@ def b_menu_select():
 	                for line in open(idlist ,'r').readlines():
 	                    id.append(line.strip())
 			
-	        print(" Total IDs   : "+str(len(id)))
-	        time.sleep(2)
-	        os.system("clear")
-	        logo()
-	        os.system('echo -e "Please wait clone account will be appear here "| lolcat')
-	        os.system('echo -e "Dev by : Tech Abm "| lolcat')
-	        os.system('echo -e "-----------------------------------------------"| lolcat')
+	      print(" Total IDs   : "+str(len(id)))
+	      time.sleep(2)
+	      os.system("clear")
+	      logo()
+	      os.system('echo -e "Please wait clone account will be appear here "| lolcat')
+	      os.system('echo -e "Dev by : Tech Abm "| lolcat')
+	      os.system('echo -e "-----------------------------------------------"| lolcat')
 	
 	
 	def main(arg):
