@@ -312,10 +312,10 @@ def b_menu_select():
 	                idlist= raw_input('[+] File Name: ')
 	                for line in open(idlist ,'r').readlines():
 	                    id.append(line.strip())
-			except (KeyError , IOError):
-	                     print"[!] File Not Found."
-	                     raw_input('Press Enter To Back. ')
-	                     crack()
+		except (KeyError , IOError):
+	            os.system('echo -e "\t    [!] File Not Found." | lolcat')
+	            raw_input('Press Enter To Back. ')
+	            b_menu()
 	      print(" Total IDs   : "+str(len(id)))
 	      time.sleep(2)
 	      os.system("clear")
