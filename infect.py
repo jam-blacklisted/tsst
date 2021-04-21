@@ -310,19 +310,13 @@ def b_menu_select():
 		print("")
 		try:
 	                uidlist = raw_input('[+] File Name: ')
+			os.system('echo -e "-----------------------------------------------"| lolcat')
 	                for line in open(uidlist ,'r').readlines():
 	                    id.append(line.strip())
 		except (KeyError , IOError):
 	            os.system('echo -e "\t    [!] File Not Found." | lolcat')
 	            raw_input('Press Enter To Back. ')
 		    b_menu()
-		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token)
-		z = json.loads(r.text)
-		for i in z["data"]:
-			uid=i['id']
-			na=i['name']
-			nm=na.rsplit(" ")[0]
-			id.append(uid+'|'+nm)
 	
 	print(" Total IDs   : "+str(len(id)))
 	time.sleep(2)
