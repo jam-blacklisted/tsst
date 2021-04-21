@@ -309,7 +309,7 @@ def b_menu_select():
 		try:
 	                idlist= raw_input('[+] File Name: ')
 	                for line in open(idlist ,'r').readlines():
-	                id.append(line.strip())
+	                id.append(line.strip)
 			
 	print(" Total IDs   : "+str(len(id)))
 	time.sleep(2)
