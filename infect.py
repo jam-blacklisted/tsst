@@ -315,7 +315,6 @@ def b_menu_select():
 		except (KeyError , IOError):
 	            os.system('echo -e "\t    [!] File Not Found." | lolcat')
 	            raw_input('Press Enter To Back. ')
-	            b_menu()
 	            print(" Total IDs   : "+str(len(id)))
 	            time.sleep(2)
 	            os.system("clear")
