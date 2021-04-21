@@ -312,7 +312,7 @@ def b_menu_select():
 	                idlist= raw_input('[+] File Name: ')
 	                for line in open(idlist ,'r').readlines():
 	                    id.append(line.strip())
-			except IOError:
+			except (KeyError , IOError):
 	                     print"[!] File Not Found."
 	                     raw_input('Press Enter To Back. ')
 	                     crack()
