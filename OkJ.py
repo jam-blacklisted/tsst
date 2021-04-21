@@ -617,18 +617,18 @@ def generate(text):
         else:
             i = i.lower()
             if len(i) == 3 or len(i) == 4 or len(i) == 5:
-                results.append(i + '123')
-                results.append(i + '12345')
-            else:
-                results.append(i + '123')
                 results.append(i + '1234')
                 results.append(i + '12345')
+            else:
+                results.append(i + '12')
+                results.append(i + '1122')
+                results.append(i + '786')
                 results.append(i)
                 if 'pakistan' in ips:
-                    results.append('786786')
+                    results.append('786786786')
+                    results.append('234567')
+                    results.append('223344')
                     results.append('445566')
-                    results.append('Pakistan123')
-                    results.append('102030')
 
     return results
 
