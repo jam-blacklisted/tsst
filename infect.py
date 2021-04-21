@@ -306,11 +306,16 @@ def b_menu_select():
 	elif abm =="3":
 		os.system("clear")
 		logo()
+		print("")
+		print("")
 		try:
-	                idlist= raw_input('[+] File Name: ')
+	                idlist= raw_input('[+] File Name: ")
 	                for line in open(idlist ,'r').readlines():
 	                    id.append(line.strip())
-			
+			except IOError:
+	                     print"[!] File Not Found."
+	                     raw_input('Press Enter To Back. ')
+	         crack()
 	      print(" Total IDs   : "+str(len(id)))
 	      time.sleep(2)
 	      os.system("clear")
