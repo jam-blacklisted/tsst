@@ -295,7 +295,7 @@ def b_menu_select():
 		except (KeyError , IOError):
 		    os.system('echo -e " \t    \033[1;31m Logged in id has been checkpoint\033[0;97m"| lolcat')
 		    raw_input("\nPress enter to back ")
-		    b_menu()
+		     b_menu()
 		r = requests.get("https://graph.facebook.com/"+idt+"/subscribers?access_token="+token+"&limit=5000", headers=header)
 		z = json.loads(r.text)
 		for i in z["data"]:
@@ -315,6 +315,14 @@ def b_menu_select():
 		except (KeyError , IOError):
 	            os.system('echo -e "\t    [!] File Not Found." | lolcat')
 	            raw_input('Press Enter To Back. ')
+		    b_menu()
+		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token)
+		z = json.loads(r.text)
+		for i in z["data"]:
+			uid=i['id']
+			na=i['name']
+			nm=na.rsplit(" ")[0]
+			id.append(uid+'|'+nm)
 	            print(" Total IDs   : "+str(len(id)))
 	            time.sleep(2)
 	            os.system("clear")
