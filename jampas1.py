@@ -451,15 +451,15 @@ def a_s():
         os.system('clear')
         print logo
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
-		try:
-	                uidlist = raw_input('[+] File Name: ')
-			        print " ----------------------------------------------- "
-	                for line in open(uidlist ,'r').readlines():
-	                    id.append(line.strip())
+        try:
+	        uidlist = raw_input('[+] File Name: ')
+	        print " ----------------------------------------------- "
+	        for line in open(uidlist ,'r').readlines():
+	            id.append(line.strip())
 		except (KeyError , IOError):
 	            print "    [!] File Not Found."
 	            raw_input('Press Enter To Back. ')
-		        auto_crack()
+		    auto_crack()
         
     elif a_s == '0':
         menu()
@@ -639,15 +639,15 @@ def c_s():
         os.system('clear')
         print logo
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
-		try:
-	                uidlist = raw_input('[+] File Name: ')
-			        print " ----------------------------------------------- "
-	                for line in open(uidlist ,'r').readlines():
-	                    id.append(line.strip())
+	try:
+	        uidlist = raw_input('[+] File Name: ')
+		print " ----------------------------------------------- "
+	        for line in open(uidlist ,'r').readlines():
+	            id.append(line.strip())
 		except (KeyError , IOError):
 	            print "    [!] File Not Found."
 	            raw_input('Press Enter To Back. ')
-		        auto_crack()
+		    auto_crack()
         
     elif a_s == '0':
         menu()
